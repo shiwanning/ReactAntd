@@ -3,7 +3,7 @@ import { Row, Col } from 'antd';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import NavLeft from './components/NavLeft';
-
+import menuList from './config/menuConfig';
 
 export default class Admin extends Component{
     render() {
