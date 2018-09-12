@@ -4,7 +4,6 @@ import { Button } from 'antd';
 
 //babel-plugin-import(按需加载)
 //import 'antd/dist/antd.css';
-
 class App extends Component {
   render() {
     return (
