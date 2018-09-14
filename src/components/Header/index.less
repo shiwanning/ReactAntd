@@ -1,4 +1,7 @@
+
+@import './../../style/default.less';
 .header{
+    background-color: @colorM;
     .header-top{
         height: 60px;
         line-height: 60px;
@@ -14,8 +17,19 @@
         line-height: 40px;
         padding: 0 20px;
         border-top: 1px solid #f9c700;
+        font-size: @fontC;
         .breadcrumb-title{
            text-align: center;
+           &:after{
+                position: absolute;
+                content: '';
+                left: 114px;
+                top: 39px;
+                border-top: 16px solid @colorM;
+                border-left: 18px solid #0000;
+                border-right: 18px solid #0000;
+                border-radius: 20%;
+           }
         }
         .weather{
             text-align: right;
@@ -24,7 +38,9 @@
                 margin-right: 10px;
             }
             .weather-detail{
-                
+                .weather-pic{
+                    height: 20px;
+                }
             }
         }
     }
