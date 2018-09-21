@@ -5,6 +5,7 @@ import Admin from './admin';
 import Login from './pages/Login';
 import NoMatch from './pages/Nomatch';
 import ButtonShow from './pages/Antd/button';
+import ModalShow from './pages/Antd/modal.js';
 export default class IRouter extends Component{
     render() {
         return (
@@ -16,6 +17,7 @@ export default class IRouter extends Component{
                                     <Admin>
                                         <Switch>
                                             <Route path="/admin/ui/buttons" component={ButtonShow} />
+                                            <Route path="/admin/ui/modals" component={ModalShow}/>
                                             <Route component={NoMatch} />
                                         </Switch>
                                     </Admin>

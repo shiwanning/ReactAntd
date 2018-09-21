@@ -19,7 +19,7 @@ export default class NavLeft extends Component{
     renderMenu = (data) => {
         return data.map((item) => {
                 if (item.children) {
-                    return <SubMenu title={<NavLink to={"/admin"+item.key}><span><Icon type="mail" /><span>{item.title}</span></span></NavLink>} key={ item.key }>
+                    return <SubMenu title={<span><Icon type="mail" /><span>{item.title}</span></span>} key={ item.key }>
                                 {this.renderMenu(item.children)}
                     </SubMenu>
                 }
