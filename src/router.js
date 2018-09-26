@@ -5,7 +5,11 @@ import Admin from './admin';
 import Login from './pages/Login';
 import NoMatch from './pages/Nomatch';
 import ButtonShow from './pages/Antd/button';
-import ModalShow from './pages/Antd/modal.js';
+import ModalShow from './pages/Antd/modal';
+import Loadings from './pages/Antd/loading';
+import Notices from './pages/Antd/notice';
+import Messages from './pages/Antd/messages';
+import TabsExample from './pages/Antd/tabs';
 export default class IRouter extends Component{
     render() {
         return (
@@ -18,6 +22,10 @@ export default class IRouter extends Component{
                                         <Switch>
                                             <Route path="/admin/ui/buttons" component={ButtonShow} />
                                             <Route path="/admin/ui/modals" component={ModalShow}/>
+                                            <Route path="/admin/ui/loadings" component={Loadings}/>
+                                            <Route path="/admin/ui/notification" component={Notices} />
+                                            <Route path="/admin/ui/messages" component={Messages} />
+                                            <Route path="/admin/ui/tabs" component={TabsExample}/>
                                             <Route component={NoMatch} />
                                         </Switch>
                                     </Admin>
