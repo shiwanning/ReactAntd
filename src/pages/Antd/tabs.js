@@ -6,17 +6,17 @@ export default class TabsExample extends Component{
     newTabIndex = 0;
     componentWillMount() {
         const panels = [{
-            key: 1,
+            key: "1",
             title: 'tab1',
             content:'tab1',
         },
         {
-            key: 2,
+            key: "2",
             title: 'tab2',
             content:'tab2',
         },
         {
-            key: 3,
+            key: "3",
             title: 'tab3',
             content:'tab3',
             }];
@@ -62,15 +62,19 @@ export default class TabsExample extends Component{
     remove = (targetKey) => {
         this.setState(
             (preState) => {
+                let activeKey = preState.activeKey;
                 let lastKeyIndex = 0;
                 preState.panels.forEach((element,index) => {
                     if (element.key === targetKey) {
                         lastKeyIndex = index - 1
                     }
                 });
-                const panels = preState.panels.filter(pane => pane.key === targetKey);
+                const panels = preState.panels.filter(pane => pane.key !== targetKey);
+                if (lastKeyIndex >= 0 && activeKey === targetKey) {
+                    activeKey = panels[lastKeyIndex].key;
+                }
                 return {
-                    activeKey: lastKeyIndex,
+                    activeKey,
                     panels,
                 }
             }

@@ -10,6 +10,9 @@ import Loadings from './pages/Antd/loading';
 import Notices from './pages/Antd/notice';
 import Messages from './pages/Antd/messages';
 import TabsExample from './pages/Antd/tabs';
+import Carousels from './pages/Antd/carousel';
+import Gallery from './pages/Antd/gallery';
+
 export default class IRouter extends Component{
     render() {
         return (
@@ -25,7 +28,9 @@ export default class IRouter extends Component{
                                             <Route path="/admin/ui/loadings" component={Loadings}/>
                                             <Route path="/admin/ui/notification" component={Notices} />
                                             <Route path="/admin/ui/messages" component={Messages} />
-                                            <Route path="/admin/ui/tabs" component={TabsExample}/>
+                                            <Route path="/admin/ui/tabs" component={TabsExample} />
+                                            <Route path="/admin/ui/carousel" component={Carousels} />
+                                            <Route path="/admin/ui/gallery" component={Gallery}/>
                                             <Route component={NoMatch} />
                                         </Switch>
                                     </Admin>
