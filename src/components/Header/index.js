@@ -38,8 +38,6 @@ export default class Header extends Component{
                         weather_Img_nightPictureUrl: weather_data[0].nightPictureUrl,
                     })
                 )
-                   
-                
             }
         );
     }

@@ -12,6 +12,8 @@ import Messages from './pages/Antd/messages';
 import TabsExample from './pages/Antd/tabs';
 import Carousels from './pages/Antd/carousel';
 import Gallery from './pages/Antd/gallery';
+import FormLogin from './pages/Antd/form/login';
+import Register from './pages/Antd/form/registerShow';
 
 export default class IRouter extends Component{
     render() {
@@ -31,6 +33,8 @@ export default class IRouter extends Component{
                                             <Route path="/admin/ui/tabs" component={TabsExample} />
                                             <Route path="/admin/ui/carousel" component={Carousels} />
                                             <Route path="/admin/ui/gallery" component={Gallery}/>
+                                            <Route path="/admin/form/login" component={FormLogin}/>
+                                            <Route path="/admin/form/reg" component={Register}/>
                                             <Route component={NoMatch} />
                                         </Switch>
                                     </Admin>
